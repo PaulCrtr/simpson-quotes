@@ -1,7 +1,6 @@
 import React from "react";
 import "./styleQuote.css";
 
-
 class QuoteCard extends React.Component {
   constructor(props) {
     super(props);
@@ -11,14 +10,17 @@ class QuoteCard extends React.Component {
   render() {
     return (
       <figure className="QuoteCard">
-        <img src={this.props.image} alt={this.props.character}></img>
+        <img src={this.props.image} alt={this.props.image}></img>
         <figcaption>
           <blockquote>{this.props.quote}</blockquote>
           <p>
             <cite>{this.props.character}</cite>
-            <span className={this.state.favorite?'is-favorite':''}
+            <span
+              className={this.state.favorite ? "is-favorite" : ""}
               onClick={(event) => {
-              this.state.favorite ? this.setState({favorite: false}):this.setState({favorite: true})
+                this.state.favorite
+                  ? this.setState({ favorite: false })
+                  : this.setState({ favorite: true });
               }}
             >
               &#9733;
@@ -29,6 +31,5 @@ class QuoteCard extends React.Component {
     );
   }
 }
-
 
 export default QuoteCard;

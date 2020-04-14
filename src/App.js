@@ -2,12 +2,14 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import QuoteCard from "./components/QuoteCard";
 import QuoteForm from "./components/QuoteForm";
+import QuoteRequest from "./components/QuoteRequest";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <div>
+        <QuoteRequest />
         <QuoteCard
           quote={
             "Shoplifting is a victimless crime, like punching someone in the dark."
